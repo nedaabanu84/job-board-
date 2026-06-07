@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Job Board</h1>
+    <p>Find jobs and apply easily</p>
+</header>
+
+<section class="categories">
+    <button onclick="filterJobs('All')">All</button>
+    <button onclick="filterJobs('IT')">IT</button>
+    <button onclick="filterJobs('Marketing')">Marketing</button>
+    <button onclick="filterJobs('Design')">Design</button>
+    <button onclick="filterJobs('Finance')">Finance</button>
+</section>
+
+<section>
+    <h2>Available Jobs</h2>
+    <div id="jobContainer"></div>
+</section>
+
+<section>
+    <h2>Bookmarked Jobs</h2>
+    <div id="bookmarkContainer"></div>
+</section>
+
+<div id="applyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeForm()">&times;</span>
+
+        <h2>Apply for Job</h2>
+
+        <form id="applyForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
